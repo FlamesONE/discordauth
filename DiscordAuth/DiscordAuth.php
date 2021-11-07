@@ -143,7 +143,7 @@ class DiscordAuth
      */
     public static function getScopes( bool $array = false )
     {
-        return ( $array == false ) ? implode( " ", self::$scopes ) : self::$scopes;
+        return ( $array == false ) ? implode( "%20", self::$scopes ) : self::$scopes;
     }
 
     /**
@@ -198,7 +198,7 @@ class DiscordAuth
         $code   = $_GET['code'];
         $state  = $_GET['state'];
 
-        if( isset( $_SESSION["state"] ) && $state != $_SESSION )
+        if( isset( $_SESSION["state"] ) && $state != $_SESSION["state"] )
             return;
 
         self::$debug == true && self::addDebug( "Try to init request, there core = $code and state = $state" );
@@ -321,6 +321,7 @@ class DiscordAuth
      */
     public static function sessionDestroy()
     {
+        !isset( $_SESSION ) && session_start(); // Create session, if not exists
         session_destroy();
     }
 
