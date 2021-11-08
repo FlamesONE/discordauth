@@ -1,5 +1,5 @@
 {
-    "name": "flamesone/steamauth",
+    "name": "flamesone/discordauth",
     "description": "Discord auth on PHP",
     "type": "library",
     "keywords": ["discord", "discordauth", "auth"],
