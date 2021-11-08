@@ -1,0 +1,22 @@
+{
+    "name": "flamesone/steamauth",
+    "description": "Discord auth on PHP",
+    "type": "library",
+    "keywords": ["discord", "discordauth", "auth"],
+    "autoload": {
+        "psr-4": {
+            "Flamesone\\Discordauth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikita",
+            "email": "62756604+FlamesONE@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "license": "GPL-3.0-or-later",
+    "minimum-stability": "stable"
+}
