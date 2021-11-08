@@ -1,4 +1,4 @@
-# oauth2-discord
+# Discord Auth
 Discord auth on PHP
 
 Discord auth - Скрипт для авторизации на вашем сайте.
