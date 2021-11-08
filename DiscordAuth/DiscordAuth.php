@@ -321,8 +321,7 @@ class DiscordAuth
      */
     public static function sessionDestroy()
     {
-        !isset( $_SESSION ) && session_start(); // Create session, if not exists
-        session_destroy();
+        isset( $_SESSION ) && session_destroy();
     }
 
     /**
